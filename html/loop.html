@@ -1,0 +1,31 @@
+<script>
+	//for
+	var n_2 = 1;
+	var n_1 = 1;
+
+	console.log(n_2);
+	console.log(n_1);
+
+	for (var i = 0; i < 100; i++) {
+		var n = n_2 + n_1;
+		console.log(n);
+		n_2 = n_1;
+		n_1 = n;
+	}
+	//while
+	n_2 = 1;
+	n_1 = 1;
+
+	console.log(n_2);
+	console.log(n_1);
+
+	var i = 0;
+	while (n_1 < 10000) {
+		var n = n_2 + n_1;
+		console.log(n);
+		n_2 = n_1;
+		n_1 = n;
+
+		i++;
+	}
+</script>
