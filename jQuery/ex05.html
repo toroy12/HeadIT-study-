@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>자바스크립트 vs jQuery-5</title>
+	<style>
+		body {
+			font-size: 15px;
+			font-family: "굴림";
+		}
+		#panel {
+			width: 600px;
+			height: 300px;
+			border: 2px solid black;
+			position: relative;
+		}
+		#car {
+			position: absolute;
+			left: 50px;
+			top: 157px;
+			width: 50px;
+		}
+		#bar {
+			position: absolute;
+			left: 50px;
+			top: 190px;
+			width: 500px;
+			height: 15px;
+			background-color: gray;
+		}
+		#nav {
+			text-align: center;
+			width: 600px;
+		}
+	</style>
+	<script src="libs/jquery-3.6.0.min.js"></script>
+	<script>
+		// 자바스크립트로 버튼을 클릭하면 자동차 이미지가 움직이는 효과 만들기
+		//window.onload = function() {
+		//	var car = document.getElementById("car");
+		//	var btnStart = document.getElementById("btnStart");
+
+		//	var left = 50;
+		//	var timerID = 0;
+
+		//	btnStart.addEventListener("click", function() {
+		//		timerID = setInterval(function() {
+		//			left++;
+		//			car.style.left = left + "px";
+					
+		//			if (left >= 500) {
+		//				clearInterval(timerID);
+		//				timerID = 0;
+		//			}
+		//		}, 10);
+		//	});	
+		//}
+		//jQuery이용하여 버튼을 클릭하면 자동차 이미지가 움직이는 효과 만들기
+		$(document).ready(function() {
+			var $car = $("#car");
+			$("#btnStart").click(function() {
+				$car.animate({
+					left : 500
+				}, 5000);
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="panel">
+		<div id="bar"></div>
+		<img src="images/car.png" id="car">
+	</div>
+	<div id="nav">
+		<button id="btnStart">출발</button>
+	</div>
+</body>
+</html>
