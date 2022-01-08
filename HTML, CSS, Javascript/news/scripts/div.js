@@ -1,9 +1,11 @@
-var btn = document.querySelector('.button1');
-var bg = document.querySelector('body');
+$(document).ready(function() {
+	var $btn = $("#button1");
+	var $bg = $("#body");
 
-	btn.addEventListener('click', function() {
-	bg.classList.toggle('bg-black');
+	$btn.click(function() {
+		$bg.style.$("#bg-black");
 	});
+});
 
 	var button = document.getElementById('btn');
 	button.addEventListener('click', function() {
@@ -42,3 +44,6 @@ btn.onclick = function() {
 	count++;
 	cnt.innerHTML = count;
 }
+
+
+
