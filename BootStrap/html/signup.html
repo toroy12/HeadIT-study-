@@ -1,103 +1,104 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>회원가입</title>
+	<title>HeadIT Kim's project</title>
 	<meta name="keyword" content="회원가입,html">
 	<link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body class="pt-5">
-	<header>
-	  	<nav class="navbar navbar-expand-lg navbar-dark bg-warning fixed-top">
-			
-				<a class="navbar-brand" href="../bootstrap.html">HeadIT</a>
-				<div class="collapse navbar-collapse" id="navbarResponsive">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active"><a class="nav-link" href="../bootstrap.html">홈</a>
-								<span class="sr-only">(current)</span>
-					</ul>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-warning fixed-top">
+
+		<a class="navbar-brand" href="../bootstrap.html">HeadIT</a>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active"><a class="nav-link" href="../bootstrap.html">홈
+					<span class="sr-only">(current)</span>
+				</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="row">
+		<div class="col-lg-2">
+			<h3 class="my-4 ml-4 text-center">Category</h3>
+			<div class="list-group mb-4 ml-4">
+				<a href="intro.html" class="list-group-item  list-group-item-warning text-center font-weight-bold">자기 소개서</a>
+				<a href="travel.html" class="list-group-item list-group-item-warning text-center font-weight-bold">여행 계획서</a> 
+				<a href="gallery.html" class="list-group-item list-group-item-warning list-group-item-active text-center font-weight-bold">나만의 갤러리</a>
+				<a href="#" class="list-group-item list-group-item-warning list-group-item-active text-center font-weight-bold">미구현</a>
+				<a href="#" class="list-group-item list-group-item-warning list-group-item-active text-center font-weight-bold">미구현</a>
+				<a href="#" class="list-group-item list-group-item-warning list-group-item-active text-center font-weight-bold">미구현</a>
+				<a href="#" class="list-group-item list-group-item-warning list-group-item-active text-center font-weight-bold">미구현</a>
+			</div>
+		</div>
+		<div class="col-lg-8 my-4">
+
+			<h3 class="bg-light mt-1">회원가입</h3>
+			<hr>
+			<form class="validation-form" novalidate>
+				<div class="row">
+					<div class="col-md-6 mb-3"> 
+						<label for="firstname">성</label> 
+						<input type="text" class="form-control" id="firstname" placeholder="성" required>
+					</div> 
+					<div class="col-md-6 mb-3"> 
+						<label for="lastname">이름</label> 
+						<input type="text" class="form-control" id="lastname" placeholder="이름" required> 
+					</div>
 				</div>
-			
-		</nav>
-	</header>
-	<h1 class="mt-4">회원가입</h1>
-	<hr>
-	<form action="signup.html" method="POST">
-		<fieldset>
-			<legend>계정 정보</legend>
-		<div>
-			<label for="id-account">
-				아이디
-			</label>
-			<input type="text" name="account" id="id-account" required="required">
+				<div class="mb-3"> 
+					<label for="email">이메일</label> 
+					<input type="email" class="form-control" id="email" placeholder="yourID@example.com" required>  
+				</div> 
+				<div class="row">
+					<div class="col-md-6 mb-3">
+						<label for="inputPassword4">비밀번호</label>
+						<input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+					</div>
+					<div class="col-md-6 mb-3">
+						<label for="inputRePassword4">비밀번호 재확인</label>
+						<input type="password" class="form-control" id="inputRePassword4" placeholder="Password">
+					</div>
+				</div>
+				<div class="row"> 
+					<div class="col-md-8 mb-3"> 
+						<label for="birth">생년월일</label> 
+						<input type="birth" class="form-control" id=""birth placeholder="yyyy-mm-dd" required>  
+					</div>
+					<div class="col-md-4 mb-3"> 
+						<label for="gender">성별</label> 
+						<select class="form-control">
+							<option>남성</option>
+							<option>여성</option>
+							<option>기타</option>
+						</select>		
+					</div>
+				</div>
+				<hr class="mb-4">
+				<div class="custom-control custom-checkbox"> 
+					<input type="checkbox" class="custom-control-input" id="aggrement" required> 
+					<label class="custom-control-label" for="aggrement">사이트 이용약관과 개인정보 수집 방침에 동의합니다.</label> 
+				</div> 
+				<div class="mb-4">
+				</div> 
+				<button class="btn btn-light btn-lg btn-block" type="submit">가입 완료</button> 
+			</form>
 		</div>
-		<div>
-			<label for="id-password">비밀번호</label>
-			<input type="password" name="password" id="id-password" required="required">
+		<div class="col-lg-2">
+			<div class="ad mt-5 mr-1"><img class="ad-img" src="images/animal1.jpg"></div>
+			<div class="ad mr-1"><img class="ad-img" src="images/animal2.jpg"></div>
 		</div>
-		<div>
-			<label for="id-password2">비밀번호 확인</label>
-			<input type="password" name="password2" id="id-password2" required="required">
-		</div>
-		</fieldset>
-
-		<fieldset>
-			<legend>프로필</legend>
-
-			<div>
-				<label for="id-name">이름</label>
-				<input type="text" name="name" id="id-name" required="required">
-			</div>
-
-			<div>
-				<label>생년월일</label>
-				<input type="number" name="birth-year" placeholder="년" min="1900" max="2021">
-				<select name="birth-month">
-					<option>월</option>
-					<option value="1">1월</option>
-					<option value="2">2월</option>
-					<option value="3">3월</option>
-					<option value="4">4월</option>
-					<option value="5">5월</option>
-					<option value="6">6월</option>
-					<option value="7">7월</option>
-					<option value="8">8월</option>
-					<option value="9">9월</option>
-					<option value="10">10월</option>
-					<option value="11">11월</option>
-					<option value="12">12월</option>
-				</select>
-				<input type="number" name="birth-day" placeholder="일" min="1" max="31">
-			</div>
-
-			<div>
-				<label>성별</label>
-				<input type="radio" name="gender" id="id-gender-male" required="required">	
-				<label for="id-gender-male">남</label>	
-
-				<input type="radio" name="gender" id="id-gender-female" required="required">
-				<label for="id-gender-female">여</label>	
-
-				<input type="radio" name="gender" id="id-gender-unknown" required="required">
-				<label for="id-gender-unknown">기타</label>	
-			</div>
-		</fieldset>
-
-		<div>
-			<input type="checkbox" name="agree" id="id-agree" required="required">
-			<label for="id-agree">사이트 이용약관과 개인정보 수집 방침에 동의합니다.</label>
-		</div>
-
-		<button class="submit" type="submit">가입하기</button>
-	</form>
+	</div>	
 	<footer class="py-4 mt-4 bg-warning fixed-bottom">
 		<div class="container">
 			<p class="m-0 text-center text-white">
-				
-				2022.01.07 BootStrap Project<br>
+				BootStrap Project<br>
 				Made By KDH
-		</p>
+			</p>
 		</div>
 	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</script>
 </body>
 </html>
